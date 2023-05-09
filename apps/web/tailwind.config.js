@@ -10,10 +10,18 @@ module.exports = {
 			fontFamily: {
 				goodtimes: ["good-times", "sans-serif"],
 				badtimes: ["good-times-bad-times", "sans-serif"],
+				inter: ["var(--font-inter)", "sans-serif"],
+			},
+			animation: {
+				"spin-slow": "spin 20s linear infinite",
+			},
+			colors: {
+				acm: "#179BD5",
 			},
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-				"gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+				"gradient-conic":
+					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 			},
 		},
 	},
