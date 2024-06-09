@@ -37,9 +37,9 @@ export default function Navbar() {
 				<div className="flex items-center justify-center w-full">
 					<div className="h-10 border-blue-500 border-[1px] rounded-lg w-full grid grid-flow-col justify-stretch p-1 gap-1 max-w-[400px]">
 						<NavBarItem path="/">Home</NavBarItem>
-						<NavBarItem path="/links">ClubKit</NavBarItem>
-						<NavBarItem path="/domains">HackKit</NavBarItem>
-						<NavBarItem path="/settings">About</NavBarItem>
+						<NavBarItem path="/clubkit">ClubKit</NavBarItem>
+						<NavBarItem path="/hackkit">HackKit</NavBarItem>
+						<NavBarItem path="/docs">Docs</NavBarItem>
 					</div>
 				</div>
 				<div className="flex items-center justify-end gap-x-4">
