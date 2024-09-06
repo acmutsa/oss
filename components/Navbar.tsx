@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { NavBarItem } from "./NavBarClientItems";
 import { Github, Disc } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 import * as React from "react";
 import type { SVGProps } from "react";
@@ -20,10 +21,14 @@ const Discord = (props: SVGProps<SVGSVGElement>) => (
 	</svg>
 );
 
-export default function Navbar() {
+interface NavbarProps {
+	className?: string;
+}
+
+export default function Navbar({ className = "" }: NavbarProps) {
 	return (
 		<div
-			className="fixed top-0 w-screen bg-zinc-900 z-10"
+			className={cn("fixed top-0 w-screen z-10", className)}
 			style={{ backdropFilter: "blur(20px)" }}
 		>
 			<div className="h-16 max-w-7xl grid grid-cols-3 mx-auto">

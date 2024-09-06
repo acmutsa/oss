@@ -11,10 +11,12 @@ interface SideBarItemProps {
 export function NavBarItem({ children, path }: SideBarItemProps) {
 	const currPath = usePathname();
 
+	console.log("currpath: ", currPath);
+
 	return (
 		<Link
 			className={
-				(path !== "/" && currPath == path) || path == "/"
+				(path !== "/" && currPath.startsWith(path)) || (path == "/" && currPath == "/")
 					? "text-white bg-blue-500 flex items-center justify-center font-bold rounded-lg"
 					: "text-white flex items-center justify-center font-medium rounded-lg"
 			}
