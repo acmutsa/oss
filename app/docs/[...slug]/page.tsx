@@ -2,6 +2,7 @@ import { getPage, getPages } from "@/app/source";
 import type { Metadata } from "next";
 import { DocsPage, DocsBody } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
+import { Callout } from "fumadocs-ui/components/callout";
 
 export default async function Page({ params }: { params: { slug?: string[] } }) {
 	const page = getPage(params.slug);
@@ -16,7 +17,7 @@ export default async function Page({ params }: { params: { slug?: string[] } }) 
 		<DocsPage toc={page.data.exports.toc}>
 			<DocsBody>
 				<h1>{page.data.title}</h1>
-				<MDX />
+				<MDX components={{ Callout }} />
 			</DocsBody>
 		</DocsPage>
 	);

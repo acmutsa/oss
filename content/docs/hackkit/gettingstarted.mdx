@@ -1,0 +1,42 @@
+---
+title: Getting Started
+description: How to get up and running with HackKit
+---
+
+This section of the docs will go over 2 key parts of setting up HackKit for your hackathon.
+
+- Getting HackKit running in a local environment
+- Setting up your production environment
+
+A important thing to note, at the moment HackKit is specifically built to run on the [Vercel](https://vercel.com/) platform. This means that you will need to have a Vercel account to use HackKit and certain limits are applied on the free tier. *We are looking to expand HackKit to support other hosting platforms in the near future.*
+
+## Prerequisites
+
+Before you can get HackKit running locally, you will need to have the following installed:
+
+- [Node.js](https://nodejs.org/en/) (LTS version, we reccomend using [nvm](https://github.com/nvm-sh/nvm))
+- [pnpm](https://pnpm.io/)
+- vscode (optional, but reccomended)
+
+<Callout>*Additional note: generally we primarily support unix based systems, windows does work but is not officially supported. At the moment, we reccomend using [WSL](https://docs.microsoft.com/en-us/windows/wsl/install) if running windows.*</Callout>
+
+Lastly, you will need to fork the [HackKit repo](https://github.com/acmutsa/hackkit) and clone it to your local machine. After cloning the repo, **make sure to run `pnpm install` to install all the dependencies**.
+
+## Services
+
+Next up there are a couple of services that need to be setup. 
+
+#### Clerk
+
+Clerk is a service that handles authentication for HackKit. You will need to create a free account on [clerk.com](https://clerk.com/) and create an application. Once you have created your application, clerk will instruct you to add some environment variables to your application. These should be added to your `.env` file in the root of the project.
+
+#### Hosting
+
+Currently, HackKit only suport hosting on Vercel (see the above note at the top of the page). You will need to create a free account on [Vercel](https://vercel.com/) and create a new project that is pointed at the repo you make earlier. **Building will fail at the moment!** This is expected, and will be fixed in the next steps.
+
+#### Databases & Storage
+
+HackKit uses Vercel Postgres, KV, and Blob to store data. Using your Vercel account from earlier, go to the storage tab and create a new postgres, KV, and Blob database. Each of these should be linked to the hosting project you created in the above step.
+
+## Local Environment
+
