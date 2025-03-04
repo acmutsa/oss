@@ -9,3 +9,4 @@ export const { GET } = createSearchAPI('advanced', {
     url: page.url,
   })),
 });
+export const runtime = "'edge"

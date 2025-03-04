@@ -8,7 +8,7 @@ This section of the docs will go over 2 key parts of setting up HackKit for your
 - Getting HackKit running in a local environment
 - Setting up your production environment
 
-A important thing to note, at the moment HackKit is specifically built to run on the [Vercel](https://vercel.com/) platform. This means that you will need to have a Vercel account to use HackKit and certain limits are applied on the free tier. *We are looking to expand HackKit to support other hosting platforms in the near future.*
+A important thing to note, at the moment HackKit is specifically built to run on the [Cloudflare](https://dash.cloudflare.com/login) platform. This means that you will need to have a Cloudflare account to use HackKit and certain limits are applied on the free tier. *We are looking to expand HackKit to support other hosting platforms in the near future.*
 
 ## Prerequisites
 
@@ -32,11 +32,12 @@ Clerk is a service that handles authentication for HackKit. You will need to cre
 
 #### Hosting
 
-Currently, HackKit only suport hosting on Vercel (see the above note at the top of the page). You will need to create a free account on [Vercel](https://vercel.com/) and create a new project that is pointed at the repo you make earlier. **Building will fail at the moment!** This is expected, and will be fixed in the next steps.
+Currently, HackKit only suport hosting on Cloudflare Pages (see the above note at the top of the page). You will need to create a free account on [Cloudflare](https://dash.cloudflare.com/login) and create a new project that is pointed at the repo you make earlier. **Building will fail at the moment!** This is expected, and will be fixed in the next steps.
 
 #### Databases & Storage
 
-HackKit uses Vercel Postgres, KV, and Blob to store data. Using your Vercel account from earlier, go to the storage tab and create a new postgres, KV, and Blob database. Each of these should be linked to the hosting project you created in the above step.
+HackKit uses [Turso Libsql](https://turso.tech/), [Upstahsh Redis](https://upstash.com/), and [R2 Blob storage](https://developers.cloudflare.com/r2/) to store data. Create the respective accounts and store them into a .env file
+
 
 ## Local Environment
 
