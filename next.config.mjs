@@ -7,14 +7,14 @@ const config = {
   reactStrictMode: true,
   webpack: (config) => {
     config.resolve.fallback = {
-      path: require.resolve("path-browserify"),
+      path: "path-browserify",
     };
 
     config.resolve.alias = {
-      "node:path": require.resolve("path-browserify"),
+      "node:path": "path-browserify",
     };
 
-    return config; // Ensure the modified config is returned
+    return config;
   },
 };
 
